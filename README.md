@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/banner.svg" alt="TaskFlow" width="100%" />
+<img src="banner.svg" alt="TaskFlow" width="100%" />
 
 <br/>
 
@@ -16,7 +16,7 @@ No framework. No build step. Just clean code and a UI that actually looks like s
 
 <br/>
 
-<img src="./assets/preview.svg" alt="TaskFlow preview" width="100%" />
+<img src="preview.svg" alt="TaskFlow preview" width="100%" />
 
 </div>
 

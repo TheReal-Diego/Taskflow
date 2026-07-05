@@ -1,0 +1,54 @@
+<svg viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0b10"/>
+      <stop offset="100%" stop-color="#14161f"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="15%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#f2b84b" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#f2b84b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="90%" cy="90%" r="50%">
+      <stop offset="0%" stop-color="#f2b84b" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#f2b84b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f9d68a"/>
+      <stop offset="100%" stop-color="#d99a2b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="280" fill="url(#bg)"/>
+  <rect width="1200" height="280" fill="url(#glow1)"/>
+  <rect width="1200" height="280" fill="url(#glow2)"/>
+
+  <!-- subtle grid dots -->
+  <g opacity="0.06">
+    <circle cx="60" cy="60" r="1.5" fill="#f2b84b"/>
+    <circle cx="140" cy="60" r="1.5" fill="#f2b84b"/>
+    <circle cx="60" cy="140" r="1.5" fill="#f2b84b"/>
+    <circle cx="1140" cy="220" r="1.5" fill="#f2b84b"/>
+    <circle cx="1080" cy="240" r="1.5" fill="#f2b84b"/>
+  </g>
+
+  <!-- diamond mark -->
+  <g transform="translate(120,140)">
+    <rect x="-22" y="-22" width="44" height="44" rx="8" fill="none" stroke="#f2b84b" stroke-width="2.5" transform="rotate(45)"/>
+    <rect x="-10" y="-10" width="20" height="20" rx="4" fill="#f2b84b" transform="rotate(45)"/>
+  </g>
+
+  <!-- title -->
+  <text x="185" y="130" font-family="Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="1" fill="url(#goldText)">TaskFlow</text>
+  <text x="187" y="168" font-family="Arial, sans-serif" font-size="21" fill="#8b8d99">Task management, done beautifully.</text>
+
+  <!-- divider -->
+  <line x1="187" y1="192" x2="620" y2="192" stroke="#f2b84b" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- right side ornament: mini progress ring -->
+  <g transform="translate(1030,140)">
+    <circle r="72" fill="none" stroke="#20242f" stroke-width="10"/>
+    <circle r="72" fill="none" stroke="#f2b84b" stroke-width="10" stroke-linecap="round"
+      stroke-dasharray="452" stroke-dashoffset="120" transform="rotate(-90)"/>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#f2b84b" text-anchor="middle">74%</text>
+  </g>
+</svg>

@@ -1,0 +1,109 @@
+<svg viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12141c"/>
+      <stop offset="100%" stop-color="#171a24"/>
+    </linearGradient>
+    <linearGradient id="fillbar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f2b84b"/>
+      <stop offset="100%" stop-color="#4ecdc4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#pbg)"/>
+
+  <!-- window chrome -->
+  <rect x="0" y="0" width="1200" height="40" fill="#0e1017"/>
+  <circle cx="24" cy="20" r="6" fill="#ff6b6b"/>
+  <circle cx="46" cy="20" r="6" fill="#f2b84b"/>
+  <circle cx="68" cy="20" r="6" fill="#4ecdc4"/>
+  <text x="600" y="25" font-family="Arial" font-size="13" fill="#565a68" text-anchor="middle">localhost/taskflow</text>
+
+  <!-- sidebar -->
+  <rect x="0" y="40" width="290" height="680" fill="#171a24"/>
+  <line x1="290" y1="40" x2="290" y2="720" stroke="#ffffff" stroke-opacity="0.06"/>
+
+  <g transform="translate(32,90)">
+    <rect x="-4" y="-14" width="20" height="20" rx="4" fill="#f2b84b" transform="rotate(45)"/>
+    <text x="26" y="4" font-family="Arial" font-size="20" font-weight="700" fill="#edeef2">TaskFlow</text>
+  </g>
+
+  <!-- progress block -->
+  <g transform="translate(32,140)">
+    <text x="0" y="0" font-family="Arial" font-size="13" fill="#8b8d99">Today's progress</text>
+    <text x="226" y="0" font-family="Arial" font-size="13" font-weight="700" fill="#f2b84b" text-anchor="end">74%</text>
+    <rect x="0" y="14" width="226" height="8" rx="4" fill="#1e212c"/>
+    <rect x="0" y="14" width="167" height="8" rx="4" fill="url(#fillbar)"/>
+  </g>
+
+  <!-- stat cards -->
+  <g transform="translate(32,190)">
+    <rect x="0" y="0" width="70" height="64" rx="8" fill="#1c1f2b" stroke="#ffffff" stroke-opacity="0.06"/>
+    <text x="35" y="30" font-family="Arial" font-size="20" font-weight="700" fill="#edeef2" text-anchor="middle">12</text>
+    <text x="35" y="48" font-family="Arial" font-size="9" fill="#565a68" text-anchor="middle">TOTAL</text>
+
+    <rect x="78" y="0" width="70" height="64" rx="8" fill="#1c1f2b" stroke="#ffffff" stroke-opacity="0.06"/>
+    <text x="113" y="30" font-family="Arial" font-size="20" font-weight="700" fill="#4ecdc4" text-anchor="middle">9</text>
+    <text x="113" y="48" font-family="Arial" font-size="9" fill="#565a68" text-anchor="middle">DONE</text>
+
+    <rect x="156" y="0" width="70" height="64" rx="8" fill="#1c1f2b" stroke="#ffffff" stroke-opacity="0.06"/>
+    <text x="191" y="30" font-family="Arial" font-size="20" font-weight="700" fill="#ff6b6b" text-anchor="middle">2</text>
+    <text x="191" y="48" font-family="Arial" font-size="9" fill="#565a68" text-anchor="middle">OVERDUE</text>
+  </g>
+
+  <!-- category pills -->
+  <g transform="translate(32,278)">
+    <rect x="0" y="0" width="52" height="28" rx="14" fill="#f2b84b" fill-opacity="0.16" stroke="#f2b84b"/>
+    <text x="26" y="18" font-family="Arial" font-size="11" fill="#f2b84b" text-anchor="middle">All</text>
+
+    <rect x="60" y="0" width="70" height="28" rx="14" fill="none" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="95" y="18" font-family="Arial" font-size="11" fill="#8b8d99" text-anchor="middle">Work</text>
+
+    <rect x="138" y="0" width="76" height="28" rx="14" fill="none" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="176" y="18" font-family="Arial" font-size="11" fill="#8b8d99" text-anchor="middle">Personal</text>
+  </g>
+
+  <!-- main header -->
+  <text x="330" y="100" font-family="Arial" font-size="30" font-weight="700" fill="#edeef2">Your tasks for today</text>
+  <text x="330" y="128" font-family="Arial" font-size="14" fill="#8b8d99">Everything you need to get done, in one place</text>
+
+  <!-- add form -->
+  <rect x="330" y="156" width="820" height="86" rx="14" fill="#1a1d28" stroke="#ffffff" stroke-opacity="0.06"/>
+  <rect x="350" y="174" width="480" height="20" rx="6" fill="#12141c"/>
+  <text x="362" y="188" font-family="Arial" font-size="12" fill="#565a68">Write a new task...</text>
+  <rect x="350" y="204" width="150" height="20" rx="6" fill="#12141c"/>
+  <text x="362" y="218" font-family="Arial" font-size="11" fill="#565a68">Category</text>
+  <rect x="510" y="204" width="120" height="20" rx="6" fill="#12141c"/>
+  <text x="522" y="218" font-family="Arial" font-size="11" fill="#565a68">Due date</text>
+  <rect x="1055" y="196" width="80" height="34" rx="8" fill="#f2b84b"/>
+  <text x="1095" y="218" font-family="Arial" font-size="12" font-weight="700" fill="#1a1305" text-anchor="middle">Add</text>
+
+  <!-- task items -->
+  <g font-family="Arial">
+    <!-- item 1 -->
+    <rect x="330" y="260" width="820" height="64" rx="14" fill="#1a1d28" stroke="#ffffff" stroke-opacity="0.06"/>
+    <circle cx="362" cy="292" r="12" fill="#4ecdc4"/>
+    <path d="M357 292l4 4 8-9" stroke="#0d1f1d" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="390" y="284" font-size="14" fill="#565a68" text-decoration="line-through">Deploy the staging build</text>
+    <rect x="390" y="292" width="50" height="18" rx="9" fill="#f2b84b" fill-opacity="0.16"/>
+    <text x="415" y="305" font-size="9" fill="#f2b84b" text-anchor="middle">Work</text>
+
+    <!-- item 2 -->
+    <rect x="330" y="332" width="820" height="64" rx="14" fill="#1a1d28" stroke="#ffffff" stroke-opacity="0.06"/>
+    <circle cx="362" cy="364" r="12" fill="none" stroke="#565a68" stroke-width="2"/>
+    <text x="390" y="360" font-size="14" fill="#edeef2">Write documentation for the API</text>
+    <rect x="390" y="368" width="50" height="18" rx="9" fill="#f2b84b" fill-opacity="0.16"/>
+    <text x="415" y="381" font-size="9" fill="#f2b84b" text-anchor="middle">Work</text>
+    <rect x="446" y="368" width="90" height="18" rx="9" fill="#ff6b6b" fill-opacity="0.16"/>
+    <text x="491" y="381" font-size="9" fill="#ff6b6b" text-anchor="middle">⚠ 2026-07-02</text>
+
+    <!-- item 3 -->
+    <rect x="330" y="404" width="820" height="64" rx="14" fill="#1a1d28" stroke="#ffffff" stroke-opacity="0.06"/>
+    <circle cx="362" cy="436" r="12" fill="none" stroke="#565a68" stroke-width="2"/>
+    <text x="390" y="432" font-size="14" fill="#edeef2">Buy groceries for the week</text>
+    <rect x="390" y="440" width="66" height="18" rx="9" fill="#f2b84b" fill-opacity="0.16"/>
+    <text x="423" y="453" font-size="9" fill="#f2b84b" text-anchor="middle">Personal</text>
+    <rect x="464" y="440" width="90" height="18" rx="9" fill="#4ecdc4" fill-opacity="0.16"/>
+    <text x="509" y="453" font-size="9" fill="#4ecdc4" text-anchor="middle">📅 2026-07-09</text>
+  </g>
+</svg>

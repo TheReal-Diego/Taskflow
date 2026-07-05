@@ -1,70 +1,102 @@
-# 📝 TaskFlow
+<div align="center">
 
-یه اپلیکیشن مدیریت کارهای روزانه با **PHP + MySQL + Vanilla JS**، با طراحی داشبورد شبانه، دسته‌بندی، تاریخ سررسید و آمار زنده‌ی پیشرفت.
+# ◆ TaskFlow
 
-![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?logo=php&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-8.x-4479A1?logo=mysql&logoColor=white)
-![License](https://img.shields.io/badge/license-MIT-blue)
+**A dark, gold-accented task manager built with PHP, MySQL & vanilla JS**
 
-## ✨ امکانات
+![PHP](https://img.shields.io/badge/PHP-8.x-12141C?style=for-the-badge&logo=php&logoColor=F2B84B)
+![MySQL](https://img.shields.io/badge/MySQL-8.x-12141C?style=for-the-badge&logo=mysql&logoColor=F2B84B)
+![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-12141C?style=for-the-badge&logo=javascript&logoColor=F2B84B)
+![License](https://img.shields.io/badge/LICENSE-MIT-12141C?style=for-the-badge&logoColor=F2B84B)
 
-- ✅ افزودن، ویرایش وضعیت (انجام‌شده/نشده) و حذف کارها بدون رفرش صفحه (AJAX)
-- 🏷️ دسته‌بندی کارها با پیشنهاد خودکار دسته‌های قبلی
-- 📅 تاریخ سررسید با هشدار خودکار برای کارهای عقب‌افتاده
-- 📊 نوار پیشرفت و آمار زنده (کل کارها / انجام‌شده / عقب‌افتاده)
-- 🔍 فیلتر سریع بر اساس دسته‌بندی
-- 🎨 طراحی اختصاصی با تم داشبورد شبانه (بدون فریمورک CSS)
-- 🔒 اتصال امن به دیتابیس با PDO + Prepared Statements
+</div>
 
-## 🛠️ پیش‌نیازها
+---
 
-- PHP 8 یا بالاتر
-- MySQL / MariaDB
-- یک سرور محلی مثل XAMPP، WAMP یا Laragon
+## ✨ Overview
 
-## 🚀 راه‌اندازی
+TaskFlow is a self-hosted daily task manager with a dashboard-style interface — deep charcoal background, a warm amber accent, and a teal highlight for completed tasks. No frontend framework, no build step: just PHP, MySQL, and vanilla JS talking to each other over a small JSON API.
 
-1. این پروژه رو کلون کن یا دانلود کن:
-   ```bash
-   git clone https://github.com/USERNAME/taskflow.git
-   ```
+## 🖤 Features
 
-2. فایل `schema.sql` رو در MySQL اجرا کن (مثلاً از طریق phpMyAdmin، تب SQL):
-   ```bash
-   mysql -u root -p < schema.sql
-   ```
+| | |
+|---|---|
+| ✅ **Instant task actions** | Add, complete, and delete tasks with zero page reloads (AJAX) |
+| 🏷️ **Categories** | Tag tasks and filter by category with one click |
+| 📅 **Due dates** | Automatic overdue warnings on the task card |
+| 📊 **Live progress** | A gold-to-teal progress bar and stat cards that update in real time |
+| 🎨 **Custom UI** | Hand-built dark dashboard theme, no CSS framework |
+| 🔒 **Secure by default** | PDO + prepared statements, credentials kept out of git |
 
-3. فایل `db.php` رو باز کن و اطلاعات اتصال دیتابیس خودت رو وارد کن:
-   ```php
-   $host = 'localhost';
-   $dbname = 'todo_app';
-   $username = 'root';
-   $password = '';
-   ```
+## 🛠️ Requirements
 
-4. پروژه رو داخل پوشه‌ی سرور محلی‌ات کپی کن (مثلاً `htdocs` برای XAMPP) و برو به:
-   ```
-   http://localhost/taskflow/
-   ```
+- PHP 8.0+
+- MySQL or MariaDB
+- A local server stack — XAMPP, WAMP, or Laragon all work fine
 
-## 📁 ساختار پروژه
+## 🚀 Setup
+
+**1. Clone the repo**
+```bash
+git clone https://github.com/YOUR_USERNAME/taskflow.git
+cd taskflow
+```
+
+**2. Create the database**
+
+Run `schema.sql` against your MySQL server (via phpMyAdmin's SQL tab, or the CLI):
+```bash
+mysql -u root -p < schema.sql
+```
+
+**3. Set up your local credentials**
+
+`db.php` is intentionally **not** included in this repo (see [Security](#-security) below). Copy the example file and fill in your own values:
+```bash
+cp db.example.php db.php
+```
+Then edit `db.php`:
+```php
+$host     = 'localhost';
+$dbname   = 'todo_app';
+$username = 'root';
+$password = 'your_real_password';
+```
+
+**4. Serve the project**
+
+Drop the folder into your server's document root (e.g. `htdocs/taskflow` for XAMPP), then visit:
+```
+http://localhost/taskflow/
+```
+
+## 📁 Project structure
 
 ```
 taskflow/
-├── index.php      → صفحه اصلی (رندر سمت سرور)
-├── api.php        → API داخلی برای افزودن/حذف/تیک زدن (JSON)
-├── db.php         → اتصال به دیتابیس با PDO
-├── schema.sql      → اسکریپت ساخت دیتابیس و جدول
-├── style.css       → استایل‌ها
-└── script.js       → منطق سمت کلاینت (AJAX + رابط کاربری)
+├── index.php        → Main page (server-rendered)
+├── api.php          → JSON API for add/toggle/delete
+├── db.php           → Your local DB connection (gitignored, not in repo)
+├── db.example.php    → Template for db.php — copy this one
+├── schema.sql        → Database + table creation script
+├── style.css         → Dashboard theme styles
+├── script.js         → Client-side logic (AJAX + UI state)
+└── .gitignore
 ```
 
-## ⚠️ نکته امنیتی
+## 🔒 Security
 
-فایل `db.php` شامل اطلاعات اتصال دیتابیس (مثل رمز عبور) است. قبل از عمومی کردن ریپازیتوری، حتماً:
-- از رمز عبور واقعی و قوی برای دیتابیس پروداکشن استفاده کن
-- در نظر بگیر که `db.php` رو به `.gitignore` اضافه کنی و یه نسخه‌ی نمونه (`db.example.php`) بدون اطلاعات حساس نگه داری
+This repo is set up so you can push it publicly without leaking anything:
 
-## 📄 لایسنس
+- `db.php` holds your real database credentials and is listed in `.gitignore` — it will **never** be committed.
+- `db.example.php` is the safe, credential-free template that ships in the repo instead.
+- All database queries go through **PDO prepared statements**, so user input is never concatenated directly into SQL.
 
-MIT — آزاد برای استفاده و تغییر.
+Before deploying anywhere public-facing (not just local dev), also make sure to:
+- Use a strong, unique MySQL password — never `root` with an empty password in production.
+- Restrict the MySQL user's privileges to just this database.
+- Serve the app over HTTPS.
+
+## 📄 License
+
+MIT — free to use, modify, and share.
